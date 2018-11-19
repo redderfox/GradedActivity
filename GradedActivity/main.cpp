@@ -1,28 +1,28 @@
 #include <iostream>
 #include <iomanip>
-#include "FinalExam.h"
+#include "CurvedActivity.h"
 using namespace std;
 
 int main()
 {
-	int questions;
-	int missed;
+	double numericScore;
+	double percentage;
 
-	cout << "How many questions are on the final exam? ";
-	cin >> questions;
+	CurvedActivity exam;
 
-	cout << "How many questions did the student miss? ";
-	cin >> missed;
+	cout << "Enter the student's raw numeric score: ";
+	cin >> numericScore;
 
-	FinalExam test(questions, missed);
+	cout << "Enter the curve percentage for this student: ";
+	cin >> percentage;
 
-	cout << setprecision(2) << fixed;
-	cout << "\nEach question counts "
-		<< test.getPointsEach() << " points.\n";
-	cout << "The adjusted exam score is "
-		<< test.getScore() << endl;
-	cout << "The exam grade is "
-		<< test.getLetterGrade() << endl;
+	exam.setPercentage(percentage);
+	exam.setScore(numericScore);
+
+	cout << fixed << setprecision(2);
+	cout << "The raw score is " << exam.getRawScore() << endl;
+	cout << "The curved score is " << exam.getScore() << endl;
+	cout << "The curved grade is " << exam.getLetterGrade() << endl;
 
 	cin.ignore();
 	cin.get();

@@ -21,6 +21,9 @@
     <ClInclude Include="GradedActivity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CurvedActivity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FinalExam.cpp">
