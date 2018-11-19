@@ -3,21 +3,20 @@
 class GradedActivity
 {
 protected:
+	char letter;
 	double score;
+	void determineGrade();
 public:
 	GradedActivity()
 	{
+		letter = ' ';
 		score = 0.0;
-	}
-
-	GradedActivity(double s)
-	{
-		score = s;
 	}
 
 	void setScore(double s)
 	{
 		score = s;
+		determineGrade();
 	}
 
 	double getScore() const
@@ -25,5 +24,8 @@ public:
 		return score;
 	}
 
-	char getLetterGrade() const;
+	char getLetterGrade() const
+	{
+		return letter;
+	}
 };
