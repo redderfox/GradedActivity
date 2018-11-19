@@ -2,7 +2,7 @@
 
 class GradedActivity
 {
-private:
+protected:
 	double score;
 public:
 	GradedActivity()

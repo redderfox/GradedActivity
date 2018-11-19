@@ -21,6 +21,7 @@ public:
 	}
 
 	void set(int, int);
+	void adjustScore();
 
 	int getNumQuestions() const
 	{
