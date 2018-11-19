@@ -1,19 +1,16 @@
 #include "GradedActivity.h"
 
-char GradedActivity::getLetterGrade() const
+void GradedActivity::determineGrade()
 {
-	char letterGrade;
-
 	if (score > 89)
-		letterGrade = 'A';
+		letter = 'A';
 	else if (score > 79)
-		letterGrade = 'B';
+		letter = 'B';
 	else if (score > 69)
-		letterGrade = 'C';
+		letter = 'C';
 	else if (score > 59)
-		letterGrade = 'D';
+		letter = 'D';
 	else
-		letterGrade = 'F';
+		letter = 'F';
 
-	return letterGrade;
 }
