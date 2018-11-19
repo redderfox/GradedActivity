@@ -1,19 +1,28 @@
 #include <iostream>
-#include "GradedActivity.h"
+#include <iomanip>
+#include "FinalExam.h"
 using namespace std;
 
 int main()
 {
-	double testScore;
+	int questions;
+	int missed;
 
-	GradedActivity test;
+	cout << "How many questions are on the final exam? ";
+	cin >> questions;
 
-	cout << "Enter your numeric test score: ";
-	cin >> testScore;
+	cout << "How many questions did the student miss? ";
+	cin >> missed;
 
-	test.setScore(testScore);
+	FinalExam test(questions, missed);
 
-	cout << "The grade for that test is " << test.getLetterGrade() << endl;
+	cout << setprecision(2) << fixed;
+	cout << "\nEach question counts "
+		<< test.getPointsEach() << " points.\n";
+	cout << "The adjusted exam score is "
+		<< test.getScore() << endl;
+	cout << "The exam grade is "
+		<< test.getLetterGrade() << endl;
 
 	cin.ignore();
 	cin.get();
